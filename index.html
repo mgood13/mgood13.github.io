@@ -8,9 +8,9 @@
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <nav class="navbar navbar-expand-lg navbar-light bg-light smallnav">
 
-    <a class="navbar-brand" href="index.html">WeatherAnalysis</a>
+    <a class="navbar-brand smallnav" href="index.html">WeatherAnalysis</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,26 +19,26 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+            <a class="nav-link dropdown-toggle smallnav" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
             <div class="dropdown-menu" style>
-                <a class="dropdown-item" href="./VisualPages/clouds.html">Latitude v Cloudiness</a>
-                <a class="dropdown-item" href="./VisualPages/temp.html">Latitude v Temperature</a>
-                <a class="dropdown-item" href="./VisualPages/humidity.html">Latitude v Humidity</a>
-                <a class="dropdown-item" href="./VisualPages/winds.html">Latitude v Wind Speed</a>
+                <a class="dropdown-item smallnav" href="./VisualPages/temp.html">Latitude v Temperature</a>
+                <a class="dropdown-item smallnav" href="./VisualPages/clouds.html">Latitude v Cloudiness</a>
+                <a class="dropdown-item smallnav" href="./VisualPages/humidity.html">Latitude v Humidity</a>
+                <a class="dropdown-item smallnav" href="./VisualPages/winds.html">Latitude v Wind Speed</a>
 
             </div>
         </li>
 
 
         <li class="nav-item">
-            <a class="nav-link" href="#">Comparison</a>
+            <a class="nav-link smallnav" href="./comparison.html">Comparison</a>
         </li>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">Resources</a>
+            <a class="nav-link smallnav" href="./resources.html">Resources</a>
         </li>
             <li class="nav-item finalli">
-            <a class="nav-link" href="#">Data</a>
+            <a class="nav-link smallnav" href="./data.html">Data</a>
         </li>
 
             <a class="navbar-brand" href="https://github.com/mgood13/Web-Design-Challenge" target="_blank">
@@ -50,7 +50,7 @@
 
 
      <div class="image">
-        <h1 class = landingtext>Welcome to Weather Data Analysis</h1>
+        <h1 class = landingtext >Welcome to Weather Data Analysis</h1>
      </div>
 
 
@@ -76,7 +76,34 @@
 
         </ul>
             </p>
-</div>
+            <!-- Button trigger modal -->
+            <div class = 'text-center'>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" align = 'center'> Something Different? </button>
+                </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Something to Break Up The Monotony</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <div class = 'container-fluid'>
+              <div class = 'col-md-6 modalimage'>
+        <img src = './Images/motivationdemotivator.jpeg'>
+                  </div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div></div>
 
     </div>
 
@@ -85,12 +112,22 @@
     <h2 align = 'center'>Visualizations</h2>
     <hr class="my-4">
      <div class = 'row'>
+         <div class = 'col-md-3'>
+        <div class="thumbnail">
+        <a href="./VisualPages/temp.html">
+          <img src="./Images/World_Temperature.png" alt="Temperature" style="width:100%">
+          <div class="caption">
+             <h5 align = 'center'>Latitude v. Temperature (F)</h5>
+          </div>
+        </a>
+      </div>
+             </div>
     <div class = 'col-md-3' align = 'center'>
      <div class="thumbnail">
         <a href="./VisualPages/clouds.html">
           <img src="./Images/World_Clouds.png" alt="Cloudiness" style="width:100%">
           <div class="caption">
-            <h5 align = 'center'>Latitude v. Cloudiness</h5>
+            <h5 align = 'center'>Latitude v. Cloudiness (%)</h5>
           </div>
         </a>
       </div>
@@ -105,16 +142,8 @@
         </a>
       </div>
         </div>
-        <div class = 'col-md-3'>
-        <div class="thumbnail">
-        <a href="./VisualPages/temp.html">
-          <img src="./Images/World_Temperature.png" alt="Temperature" style="width:100%">
-          <div class="caption">
-             <h5 align = 'center'>Latitude v. Temperature (F)</h5>
-          </div>
-        </a>
-      </div>
-        </div>
+
+
         <div class = 'col-md-3'>
         <div class="thumbnail">
         <a href="./VisualPages/winds.html">
